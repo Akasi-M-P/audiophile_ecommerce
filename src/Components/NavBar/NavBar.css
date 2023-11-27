@@ -1,0 +1,220 @@
+/* General Styles */
+.Navbar {
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+      position: sticky; /* Set the position to sticky */
+      top: 0; /* Stick to the top of the viewport */
+      z-index: 100; /* Add a z-index to ensure it appears above other elements */
+}
+
+
+/* Mobile DropDown */
+
+    .mobileNav {
+        width: 100%;
+        background-color: #F9E0AE;
+        padding: 20px;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        animation: fadeIn 1s ease-in-out forwards; 
+        overflow: hidden;
+        position: sticky; /* Set the position to sticky */
+        top: 0; /* Stick to the top of the viewport */
+        z-index: 100; /* Add a z-index to ensure it appears above other elements */
+    }
+
+    .mobile-dropdown {
+        display: block;
+    }
+    .nav-links-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-links-mobile a {
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .nav-links-mobile select {
+        background-color: #F9E0AE;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .nav-links-mobile button {
+        background-color: #C24914;
+        border: none;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: 500;
+    }
+
+    /* bars and cross nav */
+    .hide-bar {
+        display: none;
+    }
+
+        /*hide close nav */
+    .close-nav {
+        display: none;
+        
+    }
+
+    .display-close-nav {
+        display: block;
+    }
+
+    /* Define the fadeIn animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+
+/* 480-less    - phone landscape & smaller */
+@media all and (max-width: 640px) { 
+    .Navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 30px;
+        position: sticky;
+    }
+
+    .logo img {
+        width: 80px;
+        object-fit: contain;
+    }
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-nav {
+        width: 30px;
+    }
+
+    .close-nav {
+        width: 30px;
+                 overflow: hidden;
+      position: sticky; /* Set the position to sticky */
+      top: 0; /* Stick to the top of the viewport */
+      z-index: 100; /* Add a z-index to ensure it appears above other elements */
+    }
+
+    
+}
+
+/*  1024-768    - tablet landscape */
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+    .Navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .nav-links select {
+        background-color: #F9E0AE;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .nav-links button {
+        background-color: #C24914;
+        border: none;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: 500;
+    }
+
+    .logo img {
+        width: 100px;
+        object-fit: contain;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+    
+}
+
+
+/* 1280-1024   - desktop (default grid) */
+
+@media all and (min-width: 1024px) and (max-width: 1836px) { 
+    .Navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .nav-links select {
+        background-color: #F9E0AE;
+        border: none;
+        font-size: 24px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    
+
+    .nav-links button {
+        background-color: #C24914;
+        border: none;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+    
+}
+ 

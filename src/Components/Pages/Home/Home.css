@@ -1,0 +1,16 @@
+
+
+/* 640-less    - phone landscape & smaller */
+@media all and (max-width: 640px) {
+.hero-container {
+    width: 100%;
+    height: 1000px;
+    background-image: url("/resources/assets/home/mobile/image-header.jpg");
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+ .wide-spacing {
+    letter-spacing: 10px; /* Adjust the value based on your preference */
+  }
+}
