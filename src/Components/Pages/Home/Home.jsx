@@ -3,7 +3,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <main className="hero">
-      <section className="w-2/3 mx-auto flex flex-col items-center justify-center gap-4 absolute top-72 left-16">
+      <section className="w-2/3 mx-auto flex flex-col items-center justify-center gap-4 absolute top-44 left-16">
         <p className=" wide-spacing text-gray-400 font-light">NEW PRODUCT</p>
         <h1 className="text-4xl font-extrabold uppercase text-white">
           XX99 Mark II <br />

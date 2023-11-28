@@ -4,7 +4,9 @@
 @media all and (max-width: 640px) {
 .hero {
     width: 100%;
-    height: 1000px;
+    height: 700px;
+    z-index: -1;
+    margin-top: -100px;
     background-image: url("/resources/assets/home/mobile/image-header.jpg");
     background-size: contain; /* Ensure the image covers the entire container */
     background-repeat: no-repeat; /* Prevent the background image from repeating */

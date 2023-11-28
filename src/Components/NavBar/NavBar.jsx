@@ -24,7 +24,7 @@ const NavBar = () => {
   }, []);
   return (
     <>
-      <header className="bg-black text-white ">
+      <header className="bg-black text-white">
         {/* Desktop and Upwards */}
         {!isMobile && (
           <nav className="">
@@ -58,11 +58,12 @@ const NavBar = () => {
                 </div>
               </Link>
             </div>
+            <hr className="w-full text-white" />
           </nav>
         )}
         {/* Mobile and Tablet */}
         {isMobile && (
-          <nav className=" w-full flex items-center justify-between px-5 py-5 md:relative">
+          <nav className=" w-full flex items-center justify-between px-5 py-5 md:relative ">
             {/* ... your existing mobile navigation code ... */}
             <div className="w-12">
               <FaBars className="w-8 h-8 cursor-pointer" />
