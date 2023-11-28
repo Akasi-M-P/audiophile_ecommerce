@@ -2,8 +2,8 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <main className="hero-container w-full ">
-      <section className="hero-section sm:flex sm:flex-col sm:justify-center sm:items-center gap-8 h-full">
+    <main className=" ">
+      {/* <section className="hero-section flex flex-col justify-center items-center gap-8 h-full">
         <p className="mt-24 wide-spacing text-gray-400 text-center font-thin text-lg uppercase">
           NEW PRODUCT
         </p>
@@ -18,7 +18,7 @@ const Home = () => {
         <button type="" className="mt-5 bg-orange-500 text-white px-20 py-5">
           <p className="uppercase text-xl ">See Product</p>
         </button>
-      </section>
+      </section> */}
     </main>
   );
 };

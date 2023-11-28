@@ -2,94 +2,82 @@ import "../NavBar/NavBar.css";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1023);
+    };
+
+    // Initial check on mount
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
-      <header className="Navbar sm:px-12">
-        {/* Mobile */}
-        <div className="">
-          <FaBars className="w-10 h-10" />
-        </div>
-        {/* Mobile Ends*/}
-        <div className="nav-links">
-          <div className="nav-link">
-            <Link to="/">
-              <p>HOME</p>
-            </Link>
-          </div>
-          <div className="nav-link">
-            <Link to="/speakers">
-              <p>SPEAKERS</p>
-            </Link>
-          </div>
-          <div className="nav-link">
-            <Link to="/earphones">
-              <p>EARPHONES</p>
-            </Link>
-          </div>
-          <div className="nav-link">
-            <IoCartOutline />
-          </div>
-        </div>
-        {/* Mobile */}
-        <div className="nav-link">
-          <Link to="/">
-            <p className="text-3xl font-bold">audiophile</p>
-          </Link>
-        </div>
-        <div className="mobile-nav sm:w-12">
-          <IoCartOutline className="sm:w-12 sm:h-12" />
-        </div>
-        {/* Mobile Ends */}
-        <div className="close-nav">
-          <svg
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          </svg>
-        </div>
+      <header className="bg-black text-white ">
+        {/* Desktop and Upwards */}
+        {!isMobile && (
+          <nav className="">
+            {/* ... your existing desktop navigation code ... */}
+            <div>
+              <Link to="/">
+                <p>audiophile</p>
+              </Link>
+            </div>
+            <div>
+              <Link to="/">
+                <p className="uppercase">home</p>
+              </Link>
+            </div>
+            <div>
+              <Link to="/headphones">
+                <p className="uppercase">headphones</p>
+                <div>
+                  <Link to="/speakers">
+                    <p className="uppercase">speakers</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link to="/earphones">
+                    <p className="uppercase">earphones</p>
+                  </Link>
+                </div>
+                <div></div>
+                <div>
+                  <IoCartOutline />
+                </div>
+              </Link>
+            </div>
+          </nav>
+        )}
+        {/* Mobile and Tablet */}
+        {isMobile && (
+          <nav className=" w-full flex items-center justify-between px-5 py-5 ">
+            {/* ... your existing mobile navigation code ... */}
+            <div className="w-12">
+              <FaBars className="w-8 h-8 cursor-pointer" />
+            </div>
+            <div>
+              <Link to="/">
+                <p className="text-xl font-bold cursor-pointer">audiophile</p>
+              </Link>
+            </div>
+            <div className="w-12">
+              <IoCartOutline className="w-8 h-8 cursor-pointer" />
+            </div>
+          </nav>
+        )}
       </header>
-      <div className="mobileNav">
-        <div className="nav-links-mobile">
-          <div className="nav-link-mobile">
-            <p>
-              <a href="/">Home</a>
-            </p>
-          </div>
-          <div className="nav-link-mobile">
-            <p>
-              <a href="/">About</a>
-            </p>
-          </div>
-          <div className="nav-link-mobile">
-            <select name="Courses" id="">
-              <option value="courses">Courses</option>
-              <option value="online">Online</option>
-              <option value="in-person">In-Person</option>
-            </select>
-          </div>
-          <div className="nav-link-mobile">
-            <select name="Courses" id="">
-              <option value="blog">Blog</option>
-              <option value="news">News</option>
-              <option value="updates">Updates</option>
-            </select>
-          </div>
-          <div className="nav-link-mobile">
-            <button>Contact Us</button>
-          </div>
-        </div>
-      </div>
     </>
   );
 };
