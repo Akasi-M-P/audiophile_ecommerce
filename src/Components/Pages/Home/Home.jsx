@@ -2,23 +2,21 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <main className=" ">
-      {/* <section className="hero-section flex flex-col justify-center items-center gap-8 h-full">
-        <p className="mt-24 wide-spacing text-gray-400 text-center font-thin text-lg uppercase">
-          NEW PRODUCT
-        </p>
-        <h1 className="text-white text-center  text-6xl font-bold uppercase">
+    <main className="hero">
+      <section className="w-2/3 mx-auto flex flex-col items-center justify-center h-full gap-14 pt-28">
+        <p className="text-2xl wide-spacing text-gray-400">NEW PRODUCT</p>
+        <h1 className="text-6xl font-extrabold uppercase text-white">
           XX99 Mark II <br />
           HeadphoneS
         </h1>
-        <p className="text-gray-400 text-center text-2xl font-thin px-20 mt-7">
+        <p className="text-2xl text-gray-300 text-center">
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <button type="" className="mt-5 bg-orange-500 text-white px-20 py-5">
-          <p className="uppercase text-xl ">See Product</p>
+        <button type="" className="px-8 py-5 bg-orange-400">
+          <p className="text-xl uppercase text-white ">See Product</p>
         </button>
-      </section> */}
+      </section>
     </main>
   );
 };

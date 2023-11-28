@@ -62,14 +62,16 @@ const NavBar = () => {
         )}
         {/* Mobile and Tablet */}
         {isMobile && (
-          <nav className=" w-full flex items-center justify-between px-5 py-5 ">
+          <nav className=" w-full flex items-center justify-between px-5 py-5 md:relative">
             {/* ... your existing mobile navigation code ... */}
             <div className="w-12">
               <FaBars className="w-8 h-8 cursor-pointer" />
             </div>
             <div>
               <Link to="/">
-                <p className="text-xl font-bold cursor-pointer">audiophile</p>
+                <p className="text-xl font-bold cursor-pointer md:absolute md:left-20 md:top-5">
+                  audiophile
+                </p>
               </Link>
             </div>
             <div className="w-12">
