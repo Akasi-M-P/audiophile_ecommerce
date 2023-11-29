@@ -44,7 +44,7 @@ const Home = () => {
         </section>
       </section>
       {/* END OF HERO SECTION */}
-      <section className="w-full mt-24 flex flex-col gap-24">
+      <section className="w-full mt-24 flex flex-col gap-24 mb-40">
         <div className="w-10/12 h-48 mx-auto rounded-8 bg-gray-200 relative">
           <img
             src="/assets/image-removebg-preview(41).png"
@@ -52,8 +52,8 @@ const Home = () => {
             className="absolute left-32 -top-14"
           />
           <div className="absolute bottom-10 left-32  flex flex-col justify-center items-center gap-5">
-            <h1 className="uppercase font-bold">headphones</h1>
-            <p className="uppercase flex items-center gap-4 text-bolder">
+            <h1 className="uppercase font-bold text-sm">headphones</h1>
+            <p className="uppercase flex items-center gap-2 text-bolder text-sm">
               shop{" "}
               <span>
                 <IoIosArrowForward className="text-orange-400" />
@@ -68,8 +68,8 @@ const Home = () => {
             className="absolute left-32 -top-14"
           />
           <div className="absolute bottom-10 left-32  flex flex-col justify-center items-center gap-5">
-            <h1 className="uppercase font-bold">speakers</h1>
-            <p className="uppercase flex items-center gap-4 text-bolder">
+            <h1 className="uppercase font-bold text-sm">speakers</h1>
+            <p className="uppercase flex items-center gap-2 text-bolder text-sm">
               shop{" "}
               <span>
                 <IoIosArrowForward className="text-orange-400" />
@@ -84,8 +84,8 @@ const Home = () => {
             className="absolute left-32 -top-14"
           />
           <div className="absolute bottom-10 left-32  flex flex-col justify-center items-center gap-5">
-            <h1 className="uppercase font-bold">earphones</h1>
-            <p className="uppercase flex items-center gap-4 text-bolder">
+            <h1 className="uppercase font-bold text-sm">earphones</h1>
+            <p className="uppercase flex items-center gap-2 text-bolder text-sm">
               shop{" "}
               <span>
                 <IoIosArrowForward className="text-orange-400" />
