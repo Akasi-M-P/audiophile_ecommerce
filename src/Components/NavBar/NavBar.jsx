@@ -24,41 +24,42 @@ const NavBar = () => {
   }, []);
   return (
     <>
-      <header className="bg-black text-white">
+      <header className=" bg-black text-white relative z-10 ">
         {/* Desktop and Upwards */}
         {!isMobile && (
-          <nav className="">
+          <nav className="w-full flex items-center justify-between px-20 py-10">
             {/* ... your existing desktop navigation code ... */}
             <div>
               <Link to="/">
-                <p>audiophile</p>
+                <p className="text-2xl font-extrabold">audiophile</p>
               </Link>
             </div>
+            <div className="flex gap-10">
+              <div>
+                <Link to="/">
+                  <p className="uppercase hover:text-orange-500">home</p>
+                </Link>
+              </div>
+              <div>
+                <Link to="/headphones">
+                  <p className="uppercase hover:text-orange-500">headphones</p>
+                </Link>
+              </div>
+              <div>
+                <Link to="/speakers">
+                  <p className="uppercase hover:text-orange-500">speakers</p>
+                </Link>
+              </div>
+              <div>
+                <Link to="/earphones">
+                  <p className="uppercase hover:text-orange-500">earphones</p>
+                </Link>
+              </div>
+            </div>
+
             <div>
-              <Link to="/">
-                <p className="uppercase">home</p>
-              </Link>
+              <IoCartOutline className="w-8 h-8 cursor-pointer" />
             </div>
-            <div>
-              <Link to="/headphones">
-                <p className="uppercase">headphones</p>
-                <div>
-                  <Link to="/speakers">
-                    <p className="uppercase">speakers</p>
-                  </Link>
-                </div>
-                <div>
-                  <Link to="/earphones">
-                    <p className="uppercase">earphones</p>
-                  </Link>
-                </div>
-                <div></div>
-                <div>
-                  <IoCartOutline />
-                </div>
-              </Link>
-            </div>
-            <hr className="w-full text-white" />
           </nav>
         )}
         {/* Mobile and Tablet */}
