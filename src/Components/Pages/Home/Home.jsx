@@ -43,10 +43,11 @@ const Home = () => {
           </button>
         </section>
       </section>
+      {/* END OF HERO SECTION */}
       <section className="w-full mt-24 flex flex-col gap-24">
         <div className="w-10/12 h-48 mx-auto rounded-8 bg-gray-200 relative">
           <img
-            src="/resources/assets/image-removebg-preview(41).png"
+            src="/src/assets/image-removebg-preview(41).png"
             alt=""
             className="absolute left-32 -top-14"
           />
@@ -62,7 +63,7 @@ const Home = () => {
         </div>
         <div className="w-10/12 h-48 mx-auto rounded-8 bg-gray-200 relative">
           <img
-            src="/resources/assets/image-removebg-preview(38).png"
+            src="/src/assets/image-removebg-preview(38).png"
             alt=""
             className="absolute left-32 -top-14"
           />
@@ -78,7 +79,7 @@ const Home = () => {
         </div>
         <div className="w-10/12 h-48 mx-auto rounded-8 bg-gray-200 relative">
           <img
-            src="/resources/assets/image-removebg-preview(42).png"
+            src="/src/assets/image-removebg-preview(42).png"
             alt=""
             className="absolute left-32 -top-14"
           />
