@@ -117,14 +117,14 @@ const Home = () => {
         <img
           src="/assets/Oval-inner.png"
           alt=""
-          className="absolute top-5 left-6"
+          className="absolute top-5 left-8"
         />
         <img
           src="/assets/Oval Copy-outer.png "
           alt=""
-          className="absolute top-0"
+          className="absolute top-0 left-3"
         />
-        <div className="absolute bottom-20 w-full flex flex-col items-center gap-6">
+        <div className="absolute left-8 bottom-20 w-10/12 flex flex-col items-center gap-6">
           <h1 className="text-white text-center text-4xl font-extrabold">
             ZX9 <br />
             SPEAKER
