@@ -45,7 +45,7 @@ const Home = () => {
         </section>
       </section>
       {/* END OF HERO SECTION */}
-      <section className="w-full md:px-10 mt-24 lg:mt-52 flex flex-col gap-24 md:gap-5 mb-40 md:flex-row">
+      <section className="w-full md:px-10 mt-24 lg:mt-52 flex flex-col gap-24 md:gap-5 mb-28 md:flex-row">
         <div className="w-10/12 md:w-1/3 lg:w-1/3 h-48 xl:h-64 mx-auto rounded-8 bg-gray-200 relative rounded-md">
           <img
             src="/assets/image-removebg-preview(41)-desk.png"
@@ -105,6 +105,37 @@ const Home = () => {
               </p>
             </Link>
           </div>
+        </div>
+      </section>
+      {/* CATEGORIES END HERE */}
+      <section className="w-10/12 mx-auto relative rounded-md mb-5 bg-orange-500 orange-container">
+        <img
+          src="/resources/assets/home/mobile/image-speaker-zx9.png"
+          alt=""
+          className="w-44 absolute left-20 top-12"
+        />
+        <img
+          src="/assets/Oval-inner.png"
+          alt=""
+          className="absolute top-5 left-6"
+        />
+        <img
+          src="/assets/Oval Copy-outer.png "
+          alt=""
+          className="absolute top-0"
+        />
+        <div className="absolute bottom-20 w-full flex flex-col items-center gap-6">
+          <h1 className="text-white text-center text-4xl font-extrabold">
+            ZX9 <br />
+            SPEAKER
+          </h1>
+          <p className="text-gray-200 font-light text-sm text-center">
+            Upgrade to premium speakers that are phenomenally built to deliver
+            truly remarkable sound.
+          </p>
+          <button type="" className="uppercase text-white bg-black px-4 py-4">
+            <p>see product</p>
+          </button>
         </div>
       </section>
       <section>{/* {isMobile && ()} */}</section>
