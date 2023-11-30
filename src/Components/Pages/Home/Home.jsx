@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -49,52 +50,60 @@ const Home = () => {
           <img
             src="/assets/image-removebg-preview(41)-desk.png"
             alt=""
-            className="w-28 absolute left-28 -top-14 md:left-16 lg:left-44"
+            className="w-28 absolute left-28 -top-14 md:left-12 lg:left-44"
           />
           <div className="absolute bottom-5 left-32 md:left-16 lg:left-44 lg:bottom-5  flex flex-col justify-center items-center gap-5">
-            <h1 className="uppercase font-bold text-sm lg:text-xl">
+            <h1 className="uppercase font-bold text-sm md:text-md lg:text-xl">
               headphones
             </h1>
-            <p className="uppercase flex items-center gap-2 text-bolder text-sm lg:text-lg">
-              shop{" "}
-              <span>
-                <IoIosArrowForward className="text-orange-400" />
-              </span>
-            </p>
+            <Link to="/headphones">
+              <p className="uppercase flex items-center gap-2 text-bolder text-sm md:text-md lg:text-lg">
+                shop{" "}
+                <span>
+                  <IoIosArrowForward className="text-orange-400" />
+                </span>
+              </p>
+            </Link>
           </div>
         </div>
         <div className="w-10/12 md:w-1/3 lg:w-1/3  h-48 lg:h-64 mx-auto rounded-8 bg-gray-200 relative rounded-md">
           <img
             src="/assets/image-removebg-preview(38)-desk.png"
             alt=""
-            className="w-28 absolute left-28 -top-14 md:left-16 lg:left-44"
+            className="w-28 absolute left-28 -top-14 md:left-12 lg:left-44"
           />
           <div className="absolute bottom-5 left-32 md:left-16 lg:left-44  flex flex-col justify-center items-center gap-5">
-            <h1 className="uppercase font-bold text-sm lg:text-xl">speakers</h1>
-            <p className="uppercase flex items-center gap-2 text-bolder text-sm lg:text-lg">
-              shop{" "}
-              <span>
-                <IoIosArrowForward className="text-orange-400" />
-              </span>
-            </p>
+            <h1 className="uppercase font-bold text-sm md:text-md lg:text-xl">
+              speakers
+            </h1>
+            <Link to="/speakers">
+              <p className="uppercase flex items-center gap-2 text-bolder text-sm md:text-md lg:text-lg">
+                shop{" "}
+                <span>
+                  <IoIosArrowForward className="text-orange-400" />
+                </span>
+              </p>
+            </Link>
           </div>
         </div>
         <div className="w-10/12 md:w-1/3  lg:w-1/3 h-48 lg:h-64 mx-auto rounded-8 bg-gray-200 relative rounded-md">
           <img
             src="/assets/image-removebg-preview(42)-desk.png"
             alt=""
-            className="w-28 absolute left-28 -top-14 md:left-16 lg:left-44"
+            className="w-28 absolute left-28 -top-14 md:left-12 lg:left-44"
           />
           <div className="absolute bottom-5 left-32 md:left-16 lg:left-44  flex flex-col justify-center items-center gap-5">
-            <h1 className="uppercase font-bold text-sm lg:text-xl">
+            <h1 className="uppercase font-bold text-sm md:text-md lg:text-xl">
               earphones
             </h1>
-            <p className="uppercase flex items-center gap-2 text-bolder text-sm lg:text-lg">
-              shop{" "}
-              <span>
-                <IoIosArrowForward className="text-orange-400" />
-              </span>
-            </p>
+            <Link to="/earphones">
+              <p className="uppercase flex items-center gap-2 text-bolder text-sm md:text-md lg:text-lg">
+                shop{" "}
+                <span>
+                  <IoIosArrowForward className="text-orange-400" />
+                </span>
+              </p>
+            </Link>
           </div>
         </div>
       </section>
