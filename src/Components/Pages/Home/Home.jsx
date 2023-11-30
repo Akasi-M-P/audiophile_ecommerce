@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <>
       <section className="hero z-0">
-        <section className="w-2/3 md:w-1/2 mx-auto py-4 flex flex-col items-center justify-center gap-6 absolute top-44 left-16 md:top-44 md:left-48 lg:left-0 lg:top-48 lg:px-20 lg:justify-start lg:items-start lg:gap-10">
+        <section className="w-2/3 md:w-1/2 mx-auto py-4  flex flex-col items-center justify-center gap-6 absolute top-44 left-16 md:top-44 md:left-48 lg:left-0 lg:top-48 lg:px-20 lg:justify-start lg:items-start lg:gap-10">
           <p className="md:text-lg wide-spacing text-gray-400 font-light">
             NEW PRODUCT
           </p>
@@ -44,16 +44,18 @@ const Home = () => {
         </section>
       </section>
       {/* END OF HERO SECTION */}
-      <section className="w-full mt-24 flex flex-col gap-24 mb-40">
-        <div className="w-10/12 h-48 mx-auto rounded-8 bg-gray-200 relative">
+      <section className="w-full md:px-10 mt-24 lg:mt-52 flex flex-col gap-24 md:gap-5 mb-40 md:flex-row">
+        <div className="w-10/12 md:w-1/3 lg:w-1/3 h-48 lg:h-64 mx-auto rounded-8 bg-gray-200 relative rounded-md">
           <img
-            src="/assets/image-removebg-preview(41).png"
+            src="/assets/image-removebg-preview(41)-desk.png"
             alt=""
-            className="absolute left-32 -top-14"
+            className="w-28 absolute left-28 -top-14 md:left-16 lg:left-44"
           />
-          <div className="absolute bottom-10 left-32  flex flex-col justify-center items-center gap-5">
-            <h1 className="uppercase font-bold text-sm">headphones</h1>
-            <p className="uppercase flex items-center gap-2 text-bolder text-sm">
+          <div className="absolute bottom-5 left-32 md:left-16 lg:left-44 lg:bottom-5  flex flex-col justify-center items-center gap-5">
+            <h1 className="uppercase font-bold text-sm lg:text-xl">
+              headphones
+            </h1>
+            <p className="uppercase flex items-center gap-2 text-bolder text-sm lg:text-lg">
               shop{" "}
               <span>
                 <IoIosArrowForward className="text-orange-400" />
@@ -61,15 +63,15 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="w-10/12 h-48 mx-auto rounded-8 bg-gray-200 relative">
+        <div className="w-10/12 md:w-1/3 lg:w-1/3  h-48 lg:h-64 mx-auto rounded-8 bg-gray-200 relative rounded-md">
           <img
-            src="/assets/image-removebg-preview(38).png"
+            src="/assets/image-removebg-preview(38)-desk.png"
             alt=""
-            className="absolute left-32 -top-14"
+            className="w-28 absolute left-28 -top-14 md:left-16 lg:left-44"
           />
-          <div className="absolute bottom-10 left-32  flex flex-col justify-center items-center gap-5">
-            <h1 className="uppercase font-bold text-sm">speakers</h1>
-            <p className="uppercase flex items-center gap-2 text-bolder text-sm">
+          <div className="absolute bottom-5 left-32 md:left-16 lg:left-44  flex flex-col justify-center items-center gap-5">
+            <h1 className="uppercase font-bold text-sm lg:text-xl">speakers</h1>
+            <p className="uppercase flex items-center gap-2 text-bolder text-sm lg:text-lg">
               shop{" "}
               <span>
                 <IoIosArrowForward className="text-orange-400" />
@@ -77,15 +79,17 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="w-10/12 h-48 mx-auto rounded-8 bg-gray-200 relative">
+        <div className="w-10/12 md:w-1/3  lg:w-1/3 h-48 lg:h-64 mx-auto rounded-8 bg-gray-200 relative rounded-md">
           <img
-            src="/assets/image-removebg-preview(42).png"
+            src="/assets/image-removebg-preview(42)-desk.png"
             alt=""
-            className="absolute left-32 -top-14"
+            className="w-28 absolute left-28 -top-14 md:left-16 lg:left-44"
           />
-          <div className="absolute bottom-10 left-32  flex flex-col justify-center items-center gap-5">
-            <h1 className="uppercase font-bold text-sm">earphones</h1>
-            <p className="uppercase flex items-center gap-2 text-bolder text-sm">
+          <div className="absolute bottom-5 left-32 md:left-16 lg:left-44  flex flex-col justify-center items-center gap-5">
+            <h1 className="uppercase font-bold text-sm lg:text-xl">
+              earphones
+            </h1>
+            <p className="uppercase flex items-center gap-2 text-bolder text-sm lg:text-lg">
               shop{" "}
               <span>
                 <IoIosArrowForward className="text-orange-400" />
