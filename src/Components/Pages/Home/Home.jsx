@@ -112,19 +112,19 @@ const Home = () => {
         <img
           src="/resources/assets/home/mobile/image-speaker-zx9.png"
           alt=""
-          className="w-44 absolute left-20 top-12"
+          className="w-44 absolute speaker"
         />
         <img
           src="/assets/Oval-inner.png"
           alt=""
-          className="absolute top-5 left-8"
+          className="absolute inner-oval"
         />
         <img
           src="/assets/Oval Copy-outer.png "
           alt=""
-          className="absolute top-0 left-3"
+          className="absolute outer-oval"
         />
-        <div className="absolute left-8 bottom-20 w-10/12 flex flex-col items-center gap-6">
+        <div className="absolute  w-10/12 flex flex-col items-center gap-6 speaker-detail">
           <h1 className="text-white text-center text-4xl font-extrabold">
             ZX9 <br />
             SPEAKER

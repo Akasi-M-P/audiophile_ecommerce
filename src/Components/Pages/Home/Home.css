@@ -18,6 +18,25 @@
   .orange-container {
     height: 600px;
   }
+
+  .speaker{
+    left: 70px;
+    top: 50px;
+  }
+
+  .inner-oval{
+    left: 20px;
+    top: 20px;
+  }
+
+  .outer-oval{
+    left: 2px;
+  }
+
+
+  .speaker-detail{
+    bottom: 0;
+  }
 }
 
 
