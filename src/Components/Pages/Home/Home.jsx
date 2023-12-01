@@ -232,7 +232,9 @@ const Home = () => {
         </div>
         <div className="w-10/12 mx-auto flex flex-col gap-10">
           <div>
-            <p className="text-gray-400">Copyright 2021. All Rights Reserved</p>
+            <p className="text-gray-400 text-center">
+              Copyright 2021. All Rights Reserved
+            </p>
           </div>
           <div className="text-white flex items-center justify-center gap-5">
             <FaFacebookSquare className="w-6 h-6" />
