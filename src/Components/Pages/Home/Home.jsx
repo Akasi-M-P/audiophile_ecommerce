@@ -111,7 +111,7 @@ const Home = () => {
       {/* CATEGORIES END HERE */}
       <section className="w-10/12 mx-auto relative rounded-md mb-5 bg-orange-500 orange-container">
         <img
-          src="/resources/assets/home/mobile/image-speaker-zx9.png"
+          src="/assets/image-speaker-zx9.png"
           alt=""
           className="w-44 absolute speaker"
         />
@@ -157,7 +157,7 @@ const Home = () => {
           className="w-full rounded-lg"
         />
       </section>
-      <section className="w-10/12 md:w-1/3 lg:w-1/3  h-48 xl:h-64 mx-auto rounded-8 bg-gray-200 relative rounded-md mb-32 relative">
+      <section className="w-10/12 md:w-1/3 lg:w-1/3  h-48 xl:h-64 mx-auto rounded-8 bg-gray-200  rounded-md mb-32 relative">
         <h1 className="absolute top-10 left-9 text-2xl font-extrabold">
           YX1 EARPHONES
         </h1>
