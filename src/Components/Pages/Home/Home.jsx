@@ -189,7 +189,7 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section className="w-10/12 mx-auto bg-black mb-20 py-10">
+      <section className="w-full bg-black py-10">
         <nav className="w-full items-center  ">
           {/* ... your existing desktop navigation code ... */}
           <div className="mb-12">
