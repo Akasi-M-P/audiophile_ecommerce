@@ -127,4 +127,29 @@
   }
   }
 
+  @media screen and (min-width: 414px) and (min-height: 846px) {
+  /* Your styles for this screen size */
+   .speaker{
+    left: 90px;
+    top: 50px;
+  }
+
+  .inner-oval{
+    left: 40px;
+    top: 20px;
+  }
+
+  .outer-oval{
+    left: 20px;
+  }
+
+
+  .speaker-detail{
+    bottom: 60px;
+    left: 30px
+}
+
+  }
+
+
 
