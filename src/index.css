@@ -12,3 +12,7 @@
     padding: 0;
     font-family: "Manrope";
 }
+
+.wide-spacing {
+    letter-spacing: 10px; 
+  }

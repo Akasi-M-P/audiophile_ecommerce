@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import data from "/resources/data.json";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Pages/Home/Home";
 import Speakers from "./Components/Pages/Speakers/Speakers";
@@ -15,11 +15,14 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/headphones" element={<HeadPhones />} />
-          <Route path="/speakers" element={<Speakers />} />
-          <Route path="/earphones" element={<EarPhones />} />
+          <Route path="/headphones" element={<HeadPhones data={data} />} />
+          <Route path="/speakers" element={<Speakers data={data} />} />
+          <Route path="/earphones" element={<EarPhones data={data} />} />
           <Route path="/cart" element={<CheckOut />} />
-          <Route path="/product/:productId" element={<ProductDetail />} />
+          <Route
+            path="/product/:productId"
+            element={<ProductDetail data={data} />}
+          />
         </Routes>
       </Router>
     </>
