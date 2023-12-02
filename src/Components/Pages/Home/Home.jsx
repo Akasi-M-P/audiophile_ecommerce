@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import "./Home.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { FaFacebookSquare, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -238,7 +239,7 @@ const Home = () => {
           </div>
           <div className="text-white flex items-center justify-center gap-5">
             <FaFacebookSquare className="w-6 h-6" />
-            <FaTwitter className="w-6 h-6" />
+            <FaXTwitter className="w-6 h-6" />
             <FaInstagram className="w-6 h-6" />
           </div>
         </div>
