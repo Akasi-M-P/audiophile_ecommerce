@@ -7,7 +7,7 @@ const HeadPhones = ({ data }) => {
   return (
     <>
       <div className="bg-black text-white py-8">
-        <h1 className="uppercase text-center text-2xl">headphones</h1>
+        <h1 className="uppercase text-center text-2xl font-bold">headphones</h1>
       </div>
       <ul>
         {data

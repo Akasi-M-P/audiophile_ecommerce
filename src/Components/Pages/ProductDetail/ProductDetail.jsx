@@ -24,18 +24,44 @@ const ProductDetail = ({ data }) => {
   };
 
   return (
-    <div>
-      ProductDetail
-      <Link to="`/product/${productId}`">
-        <div>
-          <button onClick={goBack}>Go Back</button>
+    <div className="w-full">
+      <div className="w-10/12 mx-auto py-5">
+        <Link to="`/product/${productId}`">
+          <div>
+            <button onClick={goBack}>Go Back</button>
+          </div>
+        </Link>
+      </div>
+
+      <div className="w-full">
+        <div className="w-10/12 mx-auto">
+          <img
+            src={product.image.mobile}
+            alt={product.name}
+            className="w-full"
+          />
         </div>
-      </Link>
-      <img src={product.image.mobile} alt={product.name} />
-      <p>new product</p>
-      <h1>{product.name}</h1>
-      <h1>{product.category}</h1>
-      <p>{product.description}</p>
+
+        <div className="w-10/12 mx-auto flex flex-col  gap-4 mt-5 mb-5">
+          <p className="uppercase text-orange-400 text-sm wide-spacing font-extralight">
+            {product.new === true ? "new product" : ""}
+          </p>
+          <div className="w-1/2">
+            <h1 className="text-xl font-extrabold uppercase text-left">
+              {product.name}
+            </h1>
+          </div>
+
+          <p className="text-left text-sm">{product.description}</p>
+          <p className="text-sm font-bold">
+            $ {product.price.toLocaleString()}
+          </p>
+        </div>
+        <div>
+          <input type="number" name="" value="" />
+        </div>
+      </div>
+
       <h1>ADD TO CART</h1>
       <p>{product.features}</p>
       <ul>
