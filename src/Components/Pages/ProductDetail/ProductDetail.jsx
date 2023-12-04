@@ -1,57 +1,75 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-undef */
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
-// ProductDetail.jsx
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import CartModal from "../../Cart/CartModal";
+
 const ProductDetail = ({ data }) => {
-  // State to track the quantity
   const [quantity, setQuantity] = useState(1);
-
-  const { productId } = useParams();
+  const [isCartModalOpen, setCartModalOpen] = useState(false);
+  const [cart, setCart] = useState([]);
+  const [openModalOnUpdate, setOpenModalOnUpdate] = useState(false); // New state
   const navigate = useNavigate();
+  const { productId } = useParams();
   const product = data.find((p) => p.id.toString() === productId);
-
-  console.log("Product ID from URL:", productId);
-  console.log(
-    "All product IDs in data:",
-    data.map((p) => p.id)
-  );
 
   if (!product) {
     console.error(`Product with ID ${productId} not found`);
     return <div>Loading...</div>;
   }
 
-  console.log("Product found:", product);
-
   const goBack = () => {
-    navigate(-1); // Go back to the previous page
+    navigate(-1);
   };
 
-  // Function to handle quantity change
   const handleQuantityChange = (newQuantity) => {
-    // Ensure quantity does not go below 1
     const updatedQuantity = Math.max(1, newQuantity);
     setQuantity(updatedQuantity);
   };
 
-  // Function to handle add to cart
-  const handleAddToCart = () => {
-    // Check if the requested quantity is available in stock
-    if (quantity <= product.quantity) {
-      // Implement your logic for adding to cart
-      console.log(`Added ${quantity} ${product.name}(s) to the cart`);
-    } else {
-      console.log(`Not enough stock available for ${product.name}`);
+  useEffect(() => {
+    if (openModalOnUpdate) {
+      setCartModalOpen(true);
+      setOpenModalOnUpdate(false);
     }
+  }, [cart, openModalOnUpdate]);
+
+  const handleAddToCart = () => {
+    if (!product || !product.id || !product.name || !quantity) {
+      console.error("Invalid product or quantity");
+      return;
+    }
+    const updatedCart = [...cart, { ...product, quantity }];
+    setCart(updatedCart);
+    setOpenModalOnUpdate(true); // Set the flag to open the modal on the next update
+  };
+
+  const handleCloseCartModal = () => {
+    setCartModalOpen(false);
+  };
+
+  const handleRemoveAll = () => {
+    setCart([]);
+  };
+
+  const handleRemoveItem = (itemId) => {
+    const updatedCart = cart.filter((item) => item.id !== itemId);
+    setCart(updatedCart);
+  };
+
+  const handleCheckout = () => {
+    console.log("Checkout logic goes here");
   };
 
   return (
     <>
       <div className="w-full">
         <div className="w-10/12 mx-auto py-5">
-          <Link to="`/product/${productId}`">
+          <Link to={`/product/${productId}`}>
             <div>
               <button onClick={goBack}>Go Back</button>
             </div>
@@ -115,16 +133,14 @@ const ProductDetail = ({ data }) => {
         <div>
           <div className="w-10/12 mx-auto mt-12">
             <h1 className="uppercase mb-5 font-bold">features</h1>
-            <p className="text-sm">
-              {product.features
-                .split("\n\n")
-                .slice(0, 2)
-                .map((paragraph, index) => (
-                  <p key={index} className="mb-8">
-                    {paragraph}
-                  </p>
-                ))}
-            </p>
+            {product.features
+              .split("\n\n")
+              .slice(0, 2)
+              .map((paragraph, index) => (
+                <p key={index} className="mb-8">
+                  {paragraph}
+                </p>
+              ))}
           </div>
           <div className="w-10/12 mx-auto">
             <ul>
@@ -162,15 +178,15 @@ const ProductDetail = ({ data }) => {
             />
           </div>
         </div>
-        <div className="w-10/12 mx-auto text-center py-5">
+        <div className="w-10/12 mx-auto text-center mt-28">
           <h1 className="uppercase font-extrabold text-xl">
             you may also like
           </h1>
         </div>
 
         <div>
-          {product.others.map((product) => (
-            <div key={product.id} className="w-full py-12">
+          {product.others.map((product, index) => (
+            <div key={index} className="w-full py-8">
               <div className="w-10/12 mx-auto">
                 <img
                   src={product.image.mobile}
@@ -180,16 +196,11 @@ const ProductDetail = ({ data }) => {
               </div>
 
               <div className="w-10/12 mx-auto flex flex-col items-center gap-4 mt-5">
-                <p className="uppercase text-orange-400 text-sm wide-spacing font-extralight">
-                  {product.new === true ? "new product" : ""}
-                </p>
                 <div className="w-1/2">
                   <h1 className="text-2xl font-extrabold uppercase text-center">
                     {product.name}
                   </h1>
                 </div>
-
-                <p className="text-center text-sm">{product.description}</p>
                 <Link to={`/product/${product.id}`}>
                   <button
                     type=""
@@ -226,7 +237,6 @@ const ProductDetail = ({ data }) => {
       </section>
       <section className="w-full bg-black py-10">
         <nav className="w-full items-center  ">
-          {/* ... your existing desktop navigation code ... */}
           <div className="mb-12">
             <Link to="/">
               <p className="text-2xl font-extrabold text-center text-white">
@@ -278,6 +288,17 @@ const ProductDetail = ({ data }) => {
           </div>
         </div>
       </section>
+      <div>
+        {isCartModalOpen && (
+          <CartModal
+            cart={cart}
+            onClose={handleCloseCartModal}
+            onRemoveAll={handleRemoveAll}
+            onRemoveItem={handleRemoveItem}
+            onCheckout={handleCheckout}
+          />
+        )}
+      </div>
     </>
   );
 };
