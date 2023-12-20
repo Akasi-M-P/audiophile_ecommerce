@@ -4,9 +4,9 @@
 import Logo from "../images/shared/audiophile-logo.svg";
 import { menuListArray } from "../components/menuListArray";
 import { Link } from "react-router-dom";
-import Facebook from "../images/shared/desktop/icon-facebook.svg";
-import Instagram from "../images/shared/desktop/icon-instagram.svg";
-import Twitter from "../images/shared/desktop/icon-twitter.svg";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = ({ activeMenuRoute, setActiveMenuRoute }) => {
   const handleLinkClick = () => {
@@ -59,9 +59,9 @@ const Footer = ({ activeMenuRoute, setActiveMenuRoute }) => {
           </h4>
           {/* Icons */}
           <div className="flex flex-row gap-4 items-center mx-auto md:mx-0 ">
-            <img src={Facebook} alt="Facebook" className="cursor-pointer" />
-            <img src={Instagram} alt="Instagram" className="cursor-pointer" />
-            <img src={Twitter} alt="Twitter" className="cursor-pointer" />
+            <FaFacebookSquare className="cursor-pointer text-white" />
+            <FiInstagram className="cursor-pointer text-white" />
+            <FaXTwitter className="cursor-pointer text-white" />
           </div>
         </div>
       </div>
