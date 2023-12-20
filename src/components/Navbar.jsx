@@ -42,8 +42,8 @@ const Navbar = ({
           />
         )}
         {mobileMenu ? (
-          <div className="absolute z-[100] top-20 left-0 right-0 flex flex-col items-center gap-5 bg-black w-full h-32 lg:hidden">
-            <ul className="text-white z-[100]  lg:flex items-center gap-8">
+          <div className="absolute z-[100] top-20 left-0 right-0 flex flex-col items-center gap-5 bg-black w-full h-96 lg:hidden">
+            <ul className="text-white z-[100]  lg:flex items-center flex flex-col gap-8">
               {menuListArray.map((item, index) => {
                 return (
                   <li
